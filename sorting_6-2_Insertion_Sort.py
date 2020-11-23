@@ -9,4 +9,4 @@ for i in range(1,len(array)):
 
 print(array)
 # Time complexity : O(N^2)
-# if the data is alreay sorted, O(N)
+# if the data is alreay sorted, O(N) Pivot 에서는 O(N^2)
