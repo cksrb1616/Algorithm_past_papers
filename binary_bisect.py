@@ -1,11 +1,16 @@
 from bisect import bisect_left, bisect_right
 
-def count_by_range(a,left_vlaue, right_value):
-    right_index = bisect_right(a,right_value)
-    left_idex = bisect_left(a,left_vlaue)
+def count_by_range(array,left_vlaue, right_value):
+    right_index = bisect_right(array,right_value)
+    left_idex = bisect_left(array,left_vlaue)
     return right_index - left_idex
 
-a = [1, 2, 3, 3, 3, 3, 4, 4, 8, 9]
+n, x = map(int, input().split())
+array = list(map(int, input().split()))
 
-print(count_by_range(a,4, 4))
-print(count_by_range(a,-1,3))
+count = count_by_range(array, x, x)
+
+if count == 0:
+    print(-1)
+else:
+    print(count)
