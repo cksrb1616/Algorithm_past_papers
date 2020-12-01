@@ -1,9 +1,8 @@
-left =0
-right = 9
-while(left<= right):
-    left += 2
-    right -= 1
-    if left>right:
-        print('if' + str(left)+str(right))
-    else:
-        print('else'+ str(left)+str(right))
+data = list(map(int, input().split()))
+print(data[1:-1])
+print(data[0])
+graph = [[] for i in range(3 + 1)]
+
+for x in data[1:-1]:  # index 1 부터 제일 뒤에서 하나 앞까 = 선수강의
+    graph[x].append(1)
+print(graph)
