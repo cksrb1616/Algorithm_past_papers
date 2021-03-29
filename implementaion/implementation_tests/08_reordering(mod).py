@@ -6,7 +6,7 @@ for x in data:
     if x.isalpha():
         result.append(x)
     else:
-        value+=inx(x)
+        value+=int(x)
 
 result.sort()
 
